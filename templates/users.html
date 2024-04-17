@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask MVC</title>
+  </head>
+  <body>
+    <h1>Hello {{ user.nome }}!</h1>
+    <p>Sua posição na fila é {{ user.posição }}</p>
+
+    <h2>Lista de pedidos</h2>
+    <ul>
+      {% for pedido in pedidos %}
+      <li>{{ pedido.descrição }} ... R$ {{ pedido.valor }}</li>
+      {% endfor %}
+
+      <h3>Total de pedidos {{ pedidos|length }}</h3>
+    </ul>
+  </body>
+</html>
